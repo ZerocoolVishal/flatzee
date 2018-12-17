@@ -4,33 +4,35 @@
  * @var $provider yii\data\ActiveDataProvider
  */
 
+use yii\helpers\Html;
+use app\models\PropertyTypes;
+use yii\helpers\ArrayHelper;
+
+\yii\helpers\Url::remember();
+
 $this->registerJsFile('@web/lib/map/markerclusterer.js');
 
+$this->title = "Property Search";
+
 $propertyList = \app\models\Property::find()->all();
+
 ?>
 
 <div class="map-listing">
     <div class="search-form map-search-form ">
         <div class="card mb-0 mt-0">
+            <?= Html::beginForm(['search/'], 'GET') ?>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <input type="text" class="form-control"
-                               placeholder="Country, State, County, City, Zip, Title, Address, ID.">
+                        <?= Html::input('text', 'locality', null, ['class' => 'form-control', 'placeholder' => 'Country, State, County, City, Zip, Title']) ?>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="row">
                         <div class="col-md-7">
                             <div class="form-group">
-                                <select class="form-control ui-select">
-                                    <option value="">Property Type</option>
-                                    <option value="house">House</option>
-                                    <option value="flat">Flat</option>
-                                    <option value="apartment">Apartment</option>
-                                    <option value="land">Land</option>
-                                    <option value="room">Room</option>
-                                </select>
+                                <?= Html::dropDownList('Dropdown',null, ArrayHelper::map(PropertyTypes::find()->all(), 'id', 'name'), ['class' => 'form-control ui-select']) ?>
                             </div>
                         </div>
                         <div class="col-md-5">
@@ -41,6 +43,7 @@ $propertyList = \app\models\Property::find()->all();
                     </div>
                 </div>
             </div>
+            <?= Html::endForm() ?>
         </div>
     </div>
     <div class="row no-gutters has-map fixed">

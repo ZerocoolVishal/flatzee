@@ -2,6 +2,8 @@
 
 /* @var $this yii\web\View */
 
+use yii\helpers\Html;
+
 $this->title = 'Find Verified flates for rent';
 ?>
 <div class="site-index">
@@ -14,21 +16,21 @@ $this->title = 'Find Verified flates for rent';
                             <h2>Find your new home</h2>
                             <h3>We will help you to find the best places to spend time in any city in the world.</h3>
                         </div>
-                        <form action="property_listing.html">
+                        <?= Html::beginForm(['search/'], 'GET') ?>
                             <div class="row justify-content-md-center">
                                 <div class="col-md-9 col-lg-12">
                                     <div class="input-group input-group-lg">
-                                        <input type="text" class="form-control p-lg-4" placeholder="Enter locality, developer, landmark or project">
+                                        <?= Html::input('text', 'locality', null, ['class' => 'form-control p-lg-4', 'placeholder' => 'Enter locality, developer, landmark or project']) ?>
                                         <span class="input-group-append">
-                                              <button class="btn btn-white btn-lg" type="button">
+                                              <!--<button class="btn btn-white btn-lg" type="button">
                                                   <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                              </button>
-                                            <button class="btn btn-primary btn-lg" type="button">Search!</button>
+                                              </button>-->
+                                            <?= Html::submitButton('SEARCH', ['class' => 'btn btn-primary btn-lg']) ?>
                                         </span>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        <?= Html::endForm() ?>
                     </div>
                 </div>
             </div>

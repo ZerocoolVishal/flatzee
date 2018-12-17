@@ -30,7 +30,9 @@ AppAsset::register($this);
 <div id="main">
     <nav class="navbar navbar-expand-lg navbar-dark absolute-top " id="menu">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><span class="icon-uilove icon-uilove-realestate"></span></a>
+            <a class="navbar-brand" href="<?= \yii\helpers\Url::home() ?>">
+                <span class="icon-uilove icon-uilove-realestate"></span>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-content"
                     aria-controls="menu-content" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
