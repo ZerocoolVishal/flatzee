@@ -5,49 +5,288 @@
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+    <div class="home-search">
+        <div class="main search-form v2">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-12 col-lg-10">
+                        <div class="heading">
+                            <h2>Find your new home</h2>
+                            <h3>We will help you to find the best places to spend time in any city in the world.</h3>
+                        </div>
+                        <form action="property_listing.html">
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-9 col-lg-12">
+                                    <div class="input-group input-group-lg">
+                                        <input type="text" class="form-control p-lg-4" placeholder="Enter locality, developer, landmark or project">
+                                        <span class="input-group-append">
+                                              <button class="btn btn-white btn-lg" type="button">
+                                                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                              </button>
+                                            <button class="btn btn-primary btn-lg" type="button">Search!</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
+    <div id="content" class="pt0 pb0">
+        <div class="feature-box centered">
+            <div>
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-12 col-xl-10">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="content-box">
+                                        <div class="image"> <img src="img/demo/icons/1.png" width="100" alt=""> </div>
+                                        <h4>Lifestyle</h4>
+                                        <div class="caption">Create your best-ever home with the latest trends in renovating, decorating and more.</div>
+                                        <div class="button"><a href="#">FIND YOUR INSPIRATION</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="content-box">
+                                        <div class="image"> <img src="img/demo/icons/2.png" width="100" alt=""> </div>
+                                        <h4>International</h4>
+                                        <div class="caption">Thinking abroad? You can now dream and discover international properties.</div>
+                                        <div class="button"><a href="#">CHOOSE A COUNTRY</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="content-box">
+                                        <div class="image"> <img src="img/demo/icons/3.png" width="100" alt=""> </div>
+                                        <h4>Sell</h4>
+                                        <div class="caption">Understand your local market, learn how to get the best price for your property and find agents in your area.</div>
+                                        <div class="button"><a href="#">EXPLORE NOW</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-box centered gray">
+            <div>
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-12 col-xl-10">
+                            <div class="item-listing grid">
+                                <div class="main-title"><span>Featured Properties</span></div>
+                                <div class="main-title-description">Thinking abroad? You can now dream and discover international properties</div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="item">
+                                            <div class="item-image"><a href="property_single.html"><img src="img/demo/property/1.jpg" class="img-fluid" alt="">
+                                                    <div class="item-meta">
+                                                        <div class="item-price">$420,000 <small>$777 / sq m</small> </div>
+                                                    </div>
+                                                    <div class="item-badges">
+                                                        <div class="item-badge-left">Sponsored</div>
+                                                        <div class="item-badge-right">For Sale</div>
+                                                    </div>
+                                                </a> <a href="#" class="save-item"><i class="fa fa-star"></i></a> </div>
+                                            <div class="item-info">
+                                                <h3 class="item-title">3 bed semi-detached house</h3>
+                                                <div class="item-location"><i class="fa fa-map-marker"></i> Kirkstone Road, Middlesbrough TS3</div>
+                                                <div class="item-details-i"> <span class="bedrooms" data-toggle="tooltip" title="3 Bedrooms">3 <i class="fa fa-bed"></i></span> <span class="bathrooms" data-toggle="tooltip" title="2 Bathrooms">2 <i class="fa fa-bath"></i></span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="item">
+                                            <div class="item-image"><a href="property_single.html"><img src="img/demo/property/2.jpg" class="img-fluid" alt="">
+                                                    <div class="item-meta">
+                                                        <div class="item-price">$420,000 <small>$777 / sq m</small> </div>
+                                                    </div>
+                                                    <div class="item-badges">
+                                                        <div class="item-badge-left">Sponsored</div>
+                                                        <div class="item-badge-right">For Sale</div>
+                                                    </div>
+                                                </a> <a href="#" class="save-item"><i class="fa fa-star"></i></a> </div>
+                                            <div class="item-info">
+                                                <h3 class="item-title">3 bed semi-detached house</h3>
+                                                <div class="item-location"><i class="fa fa-map-marker"></i> Kirkstone Road, Middlesbrough TS3</div>
+                                                <div class="item-details-i"> <span class="bedrooms" data-toggle="tooltip" title="3 Bedrooms">3 <i class="fa fa-bed"></i></span> <span class="bathrooms" data-toggle="tooltip" title="2 Bathrooms">2 <i class="fa fa-bath"></i></span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="item">
+                                            <div class="item-image"><a href="property_single.html"><img src="img/demo/property/3.jpg" class="img-fluid" alt="">
+                                                    <div class="item-meta">
+                                                        <div class="item-price">$420,000 <small>$777 / sq m</small> </div>
+                                                    </div>
+                                                    <div class="item-badges">
+                                                        <div class="item-badge-left">Sponsored</div>
+                                                        <div class="item-badge-right">For Sale</div>
+                                                    </div>
+                                                </a> <a href="#" class="save-item"><i class="fa fa-star"></i></a> </div>
+                                            <div class="item-info">
+                                                <h3 class="item-title">3 bed semi-detached house</h3>
+                                                <div class="item-location"><i class="fa fa-map-marker"></i> Kirkstone Road, Middlesbrough TS3</div>
+                                                <div class="item-details-i"> <span class="bedrooms" data-toggle="tooltip" title="3 Bedrooms">3 <i class="fa fa-bed"></i></span> <span class="bathrooms" data-toggle="tooltip" title="2 Bathrooms">2 <i class="fa fa-bath"></i></span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-box centered">
+            <div>
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-12 col-xl-10">
+                            <div class="main-title"><span>What our clients say</span></div>
+                            <div class="swiper-container testimonials">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="item content-box centered">
+                                            <div class="image"> <img class="rounded-circle" src="img/demo/profile.jpg" width="180" alt=""> </div>
+                                            <h4>Thank you for your quick and clear responses. They are much appreciated. This was a site that needed to go up fast and it has – customizations and all!</h4>
+                                            <div class="caption">The Brown Family</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item content-box centered">
+                                            <div class="image"> <img class="rounded-circle" src="img/demo/profile2.jpg" width="180" alt="">
+                                                <h4>Thank you for your quick and clear responses. They are much appreciated. This was a site that needed to go up fast and it has – customizations and all!</h4>
+                                                <div class="caption">The Brown Family</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item content-box centered">
+                                            <div class="image"> <img class="rounded-circle" src="img/demo/profile3.jpg" width="180" alt="">
+                                                <h4>Thank you for your quick and clear responses. They are much appreciated. This was a site that needed to go up fast and it has – customizations and all!</h4>
+                                                <div class="caption">The Brown Family</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                            <script>
+                                var swiper = new Swiper('.swiper-container', {
+                                    loop: true,
+                                    centeredSlides: true,
+                                    autoplay: {
+                                        delay: 5000,
+                                        disableOnInteraction: false,
+                                    },
+                                    pagination: {
+                                        el: '.swiper-pagination',
+                                        clickable: true,
+                                    },
+                                    navigation: {
+                                        nextEl: '.swiper-button-next',
+                                        prevEl: '.swiper-button-prev',
+                                    },
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-box gray centered">
+            <div>
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-12 col-xl-10">
+                            <div class="main-title"><span>News &amp; Updates </span></div>
+                            <div class="main-title-description">Stay up to date with the latest happenings.</div>
+                            <div class="item-listing grid mb50">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="item">
+                                            <div class="item-image"> <a href="blog_single.html"><img src="img/demo/property/1.jpg" class="img-fluid" alt="">
+                                                    <div class="item-meta">
+                                                        <div class="item-price"><small>26th Oct 17</small> </div>
+                                                    </div>
+                                                    <div class="item-badges">
+                                                        <div class="item-badge-right">Legal</div>
+                                                    </div>
+                                                </a> </div>
+                                            <div class="item-info">
+                                                <h3 class="item-title">Allianz invests 100m in Hines European Value Fund</h3>
+                                                <div class="item-comments-count"><i class="fa fa-comment-o"></i> 3</div>
+                                                <div class="item-author">By John Doe</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="item">
+                                            <div class="item-image"> <a href="blog_single.html"><img src="img/demo/property/1.jpg" class="img-fluid" alt="">
+                                                    <div class="item-meta">
+                                                        <div class="item-price"><small>26th Oct 17</small> </div>
+                                                    </div>
+                                                    <div class="item-badges">
+                                                        <div class="item-badge-right">Development</div>
+                                                    </div>
+                                                </a> </div>
+                                            <div class="item-info">
+                                                <h3 class="item-title">Skanska signs 43.2m construction deal in Sollentuna</h3>
+                                                <div class="item-comments-count"><i class="fa fa-comment-o"></i> 3</div>
+                                                <div class="item-author">By John Doe</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="item">
+                                            <div class="item-image"> <a href="blog_single.html"><img src="img/demo/property/1.jpg" class="img-fluid" alt="">
+                                                    <div class="item-meta">
+                                                        <div class="item-price"><small>26th Oct 17</small> </div>
+                                                    </div>
+                                                    <div class="item-badges">
+                                                        <div class="item-badge-right category">Finance</div>
+                                                    </div>
+                                                </a> </div>
+                                            <div class="item-info">
+                                                <h3 class="item-title">Baltic Horizon Fund plans next public offering of new units</h3>
+                                                <div class="item-comments-count"><i class="fa fa-comment-o"></i> 3</div>
+                                                <div class="item-author">By John Doe</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center"><a href="#" class="btn btn-xlg btn-link">View All</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-box centered pb0">
+            <div>
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-10 col-xl-10">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="text-center mt50 mb50">
+                                        <div class="main-title"><span>Connect with us from anywhere</span></div>
+                                        <div class="main-title-description">Download the mobile app and enjoy the smoothest experience</div>
+                                        <img src="img/store/apple.svg" width="120" alt=""> <img src="img/store/google.svg" width="120" alt=""> </div>
+                                </div>
+                                <div class="col-md-6"> <img src="img/demo/mobile-app-hero.png" class="img-fluid" alt=""> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
