@@ -2,11 +2,11 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Find Verified flates for rent';
 ?>
 <div class="site-index">
     <div class="home-search">
-        <div class="main search-form v2">
+        <div class="main search-form p-0 v2">
             <div class="container">
                 <div class="row justify-content-md-center">
                     <div class="col-md-12 col-lg-10">
@@ -264,25 +264,6 @@ $this->title = 'My Yii Application';
                                 </div>
                             </div>
                             <div class="text-center"><a href="#" class="btn btn-xlg btn-link">View All</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="feature-box centered pb0">
-            <div>
-                <div class="container">
-                    <div class="row justify-content-md-center">
-                        <div class="col col-lg-10 col-xl-10">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="text-center mt50 mb50">
-                                        <div class="main-title"><span>Connect with us from anywhere</span></div>
-                                        <div class="main-title-description">Download the mobile app and enjoy the smoothest experience</div>
-                                        <img src="img/store/apple.svg" width="120" alt=""> <img src="img/store/google.svg" width="120" alt=""> </div>
-                                </div>
-                                <div class="col-md-6"> <img src="img/demo/mobile-app-hero.png" class="img-fluid" alt=""> </div>
-                            </div>
                         </div>
                     </div>
                 </div>

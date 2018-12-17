@@ -21,15 +21,14 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title><?= Yii::$app->name ?> - <?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap" id="main">
-
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-over absolute-top" id="menu">
+<div id="main">
+    <nav class="navbar navbar-expand-lg navbar-dark absolute-top " id="menu">
         <div class="container">
             <a class="navbar-brand" href="index.html"><span class="icon-uilove icon-uilove-realestate"></span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-content"
@@ -89,7 +88,11 @@ AppAsset::register($this);
     <?= Alert::widget() ?>
     <?= $content ?>
 
-    <footer id="footer" class="bg-light footer-light">
+    <button class="btn btn-primary btn-circle" id="to-top" style="visibility: visible; opacity: 1;">
+        <i class="fa fa-angle-up"></i>
+    </button>
+
+    <footer id="footer" class="footer-light">
         <div class="container container-1000">
             <div class="row">
                 <div class="col-lg-3">
@@ -162,9 +165,7 @@ AppAsset::register($this);
 
             </div>
             <div class="footer-credits d-lg-flex justify-content-lg-between align-items-center">
-                <div>Powered by <a href="http://uilove.in/" target="_blank"><strong>uilove</strong></a></div>
-
-                <div>© 2018 Cart Mint Inc. All Rights Reserved</div>
+                <div>© 2018 FlatZee. All Rights Reserved</div>
             </div>
         </div>
     </footer>

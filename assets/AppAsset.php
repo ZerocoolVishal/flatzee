@@ -20,7 +20,7 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+        //'css/site.css',
         'https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400,500,700',
         'lib/bootstrap/css/bootstrap.min.css',
         'lib/font-awesome/css/font-awesome.min.css',
