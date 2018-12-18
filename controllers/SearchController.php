@@ -10,13 +10,16 @@ class SearchController extends \yii\web\Controller
     public function actionIndex()
     {
 
-        $query = Property::find();
+        $propertyList = Property::find()->all();
 
-        $provider = new ActiveDataProvider([
-            'query' => $query
+        $locality = \Yii::$app->request->get('locality');
+        if(isset($locality)) {
+            $propertyList = Property::find()->where(['location' => $locality])->all();
+        }
+        return $this->render('index', [
+            'locality' => $locality,
+            'propertyList' => $propertyList
         ]);
-
-        return $this->render('index', ['provider' => $provider]);
     }
 
 }

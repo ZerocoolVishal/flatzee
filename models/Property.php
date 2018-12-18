@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\behaviors\SluggableBehavior;
 
 /**
  * This is the model class for table "property".
@@ -71,6 +72,17 @@ class Property extends \yii\db\ActiveRecord
             [['property_owner_id'], 'exist', 'skipOnError' => true, 'targetClass' => PropertyOwner::className(), 'targetAttribute' => ['property_owner_id' => 'id']],
         ];
     }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => SluggableBehavior::className(),
+                'attribute' => 'title',
+            ],
+        ];
+    }
+
 
     /**
      * {@inheritdoc}

@@ -17,6 +17,8 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
+    private  $apiKey = MAPS_API_KEY;
+
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
@@ -32,7 +34,7 @@ class AppAsset extends AssetBundle
         'css/style.css'
     ];
     public $js = [
-        'lib/jquery-3.2.1.min.js',
+        //'lib/jquery-3.2.1.min.js',
         'lib/popper.min.js',
         'lib/bootstrap/js/bootstrap.min.js',
         'lib/selectric/jquery.selectric.js',
@@ -41,10 +43,11 @@ class AppAsset extends AssetBundle
         'lib/Magnific-Popup/jquery.magnific-popup.min.js',
         'lib/sticky-sidebar/ResizeSensor.min.js',
         'lib/sticky-sidebar/theia-sticky-sidebar.min.js',
-        'lib/lib.js'
+        'lib/lib.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
+        'yii\web\JqueryAsset',
         //'yii\bootstrap\BootstrapAsset',
     ];
 }

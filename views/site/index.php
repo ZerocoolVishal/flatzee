@@ -5,6 +5,10 @@
 use yii\helpers\Html;
 
 $this->title = 'Find Verified flates for rent';
+
+$apiKey = MAPS_API_KEY;
+$this->registerJsFile("https://maps.googleapis.com/maps/api/js?key=$apiKey=places&callback=initialize");
+
 ?>
 <div class="site-index">
     <div class="home-search">
@@ -20,7 +24,7 @@ $this->title = 'Find Verified flates for rent';
                             <div class="row justify-content-md-center">
                                 <div class="col-md-9 col-lg-12">
                                     <div class="input-group input-group-lg">
-                                        <?= Html::input('text', 'locality', null, ['class' => 'form-control p-lg-4', 'placeholder' => 'Enter locality, developer, landmark or project']) ?>
+                                        <?= Html::input('text', 'locality', null, ['class' => 'form-control p-lg-4', 'placeholder' => 'Enter locality, developer, landmark or project', 'id' => 'searchbox', 'required' => 'true']) ?>
                                         <span class="input-group-append">
                                               <!--<button class="btn btn-white btn-lg" type="button">
                                                   <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -273,3 +277,9 @@ $this->title = 'Find Verified flates for rent';
         </div>
     </div>
 </div>
+<script>
+    function initialize() {
+        var input = document.getElementById('searchbox');
+        new google.maps.places.Autocomplete(input);
+    }
+</script>
