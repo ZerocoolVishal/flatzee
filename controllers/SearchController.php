@@ -21,5 +21,4 @@ class SearchController extends \yii\web\Controller
             'propertyList' => $propertyList
         ]);
     }
-
 }

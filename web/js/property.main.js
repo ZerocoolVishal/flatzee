@@ -1,5 +1,8 @@
 function initMap() {
 
+    //Auto complete for search
+    new google.maps.places.Autocomplete(document.getElementById('searchbox'));
+
     var bounds = new google.maps.LatLngBounds();
     var map;
     map = new google.maps.Map(document.getElementById("map_canvas"));
@@ -42,9 +45,10 @@ function initMap() {
 
 }
 
+
 var locations = [{
-    lat: -19.9286,
-    lng: -43.93888,
+    lat: 19.171508,
+    lng: 73.235426,
     info: "3 bed semi-detached house for sale"
 }, {
     lat: -19.85758,

@@ -59,9 +59,8 @@ AppAsset::register($this);
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link nav-btn" href="my_listing_add.html"><span>
-                                <i class="fa fa-plus" aria-hidden="true"></i> Add listing</span>
-                        </a>
+                        <?= Html::a('<span>List your property</span>',
+                            ['property-listing'], ['class' => 'nav-link nav-btn']) ?>
                     </li>
                     <li class="nav-item dropdown user-account">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
