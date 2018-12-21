@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Users;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -64,6 +65,49 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+
+    /**
+     * Register User action.
+     *
+     * @return Response|string
+     */
+    public function actionRegister()
+    {
+        $request = Yii::$app->request->post();
+
+        $model = new \app\models\Users();
+
+        if ($model->load($request)) {
+
+            $model->password = md5($request['Users']['password']);
+            $model->accessToken = md5($request['Users']['username']);
+            $model->authKey = md5($request['Users']['username']);
+
+            if ($model->validate()) {
+                $model->save();
+                return $this->redirect(['site/user-created-success']);
+            }
+        }
+
+        return $this->render('user_register', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * User Register Success page
+     *
+     * @return string
+     */
+    public function actionUserCreatedSuccess()
+    {
+        return $this->render('success', [
+            'title' => 'You Are Successifully Registered',
+            'message' => 'Please Login',
+            'redirect' => 'site/login'
+        ]);
+    }
+
     /**
      * Login action.
      *
@@ -98,8 +142,64 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
+    /**
+     * Saving enquiries
+     *
+     * @return string
+     */
     public function actionPropertyListing()
     {
-        return $this->render('enquiry');
+        $model = new \app\models\Enquiries();
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                $model->save();
+                return $this->redirect(['site/enquiry-success']);
+            }
+        }
+
+        return $this->render('enquiry', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Enquiry Success page
+     *
+     * @return string
+     */
+    public function actionEnquirySuccess()
+    {
+        return $this->render('success', [
+            'title' => 'Property Listing Submit',
+            'message' => 'Thank You, We will contact you soon.',
+            'redirect' => 'site/'
+        ]);
+    }
+
+    /**
+     * User Profile
+     *
+     * @return string
+     */
+    public  function actionProfile()
+    {
+
+        $model = Users::find()->where(['id' => Yii::$app->user->identity->getId()])->one();
+
+        if ($model->load(Yii::$app->request->post())) {
+
+            if ($model->validate()) {
+                $model->save();
+                return $this->render('profile', [
+                    'model' => $model,
+                    'message' => 'Profile Updated !!'
+                ]);
+            }
+        }
+
+        return $this->render('profile', [
+            'model' => $model,
+        ]);
     }
 }

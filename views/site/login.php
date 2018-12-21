@@ -1,47 +1,58 @@
 <?php
-
-/* @var $this yii\web\View */
-/* @var $form yii\bootstrap\ActiveForm */
-/* @var $model app\models\LoginForm */
+/**
+ * Created by PhpStorm.
+ * User: vishal
+ * Date: 21/12/18
+ * Time: 6:20 PM
+ *
+ * @var  $this \yii\web\View
+ */
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Login';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = "Login";
+
 ?>
-<div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
+<div id="content">
+    <div class="container">
+        <div class="row justify-content-md-center align-items-center">
+            <div class="col col-md-6  col-lg-5 col-xl-4">
+                <ul class="nav nav-tabs tab-lg" role="tablist">
+                    <li role="presentation" class="nav-item">
+                        <?= Html::a('Login', ['site/login'], ['class' => 'nav-link active']) ?>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <?= Html::a('Register', ['site/register'], ['class' => 'nav-link']) ?>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="login">
+                        <?php $form = ActiveForm::begin([
+                            'id' => 'login-form',
+                        ]); ?>
+                            <div class="form-group">
+                                <?= $form->field($model, 'username')->textInput(['autofocus' => true, 'placeholder' => 'Username or Email']) ?>
+                            </div>
+                            <div class="form-group">
+                                <?= $form->field($model, 'password')->passwordInput(['placeholder' => 'Password']) ?>
+                            </div>
+                            <p class="text-lg-right"><a href="#">Forgot Password</a></p>
+                            <?= $form->field($model, 'rememberMe')->checkbox([
+                                'template' => "<div class='checkbox'>{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
+                            ]) ?>
+                            <?= Html::submitButton('Login', ['class' => 'btn btn-primary btn-lg', 'name' => 'login-button']) ?>
 
-    <?php $form = ActiveForm::begin([
-        'id' => 'login-form',
-        'layout' => 'horizontal',
-        'fieldConfig' => [
-            'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
-            'labelOptions' => ['class' => 'col-lg-1 control-label'],
-        ],
-    ]); ?>
+                        <?php ActiveForm::end(); ?>
+                    </div>
+                </div>
+                <div> </div>
+            </div>
 
-        <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
-
-        <?= $form->field($model, 'password')->passwordInput() ?>
-
-        <?= $form->field($model, 'rememberMe')->checkbox([
-            'template' => "<div class=\"col-lg-offset-1 col-lg-3\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
-        ]) ?>
-
-        <div class="form-group">
-            <div class="col-lg-offset-1 col-lg-11">
-                <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+            <div class="col-md-6 col-lg-5 col-xl-4">
+                <div class="socal-login-buttons"> <a href="#" class="btn btn-social btn-block btn-facebook"><i class="icon fa fa-facebook"></i> Continue with Facebook</a> <a href="#" class="btn btn-social btn-block btn-twitter"><i class="icon fa fa-twitter"></i> Continue with Twitter</a> <a href="#" class="btn btn-social btn-block btn-google"><i class="icon fa fa-google"></i> Continue with Google</a> </div>
             </div>
         </div>
-
-    <?php ActiveForm::end(); ?>
-
-    <div class="col-lg-offset-1" style="color:#999;">
-        You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
-        To modify the username/password, please check out the code <code>app\models\User::$users</code>.
     </div>
 </div>

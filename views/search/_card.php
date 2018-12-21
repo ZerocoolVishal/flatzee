@@ -32,7 +32,7 @@ use yii\helpers\Html;
         <div class="col-lg-7">
             <div class="item-info">
                 <h3 class="item-title">
-                    <?= Html::a($property->title, ['property/', 'slug' => $property->slug], ['target' => '_blank']) ?>
+                    <?= Html::a($property->title, ['property/', 'slug' => $property->slug]) ?>
                 </h3>
                 <div class="item-location">
                     <i class="fa fa-map-marker"></i> <?= $property->location ?>
